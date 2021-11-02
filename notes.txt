@@ -1,0 +1,2 @@
+#start a project with vite
+$ npm init vite@latest -- --template react-ts
