@@ -6,12 +6,15 @@ export interface CardProps {
   matched?: boolean;
   handleChoice?: Function;
   flipped?: boolean;
+  disabled?: boolean;
 }
 
 const Card = (card: CardProps) => {
 
   const handleClick = () => {
-    card.handleChoice!(card)
+    if(!card.disabled) {
+      card.handleChoice!(card)
+    }
   }
 
     return (
